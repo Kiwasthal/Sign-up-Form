@@ -74,22 +74,6 @@ svg {
     flex-direction: column;
 }
 
-.form-header {
-    padding: 25px;
-}
-
-form {
-    padding-left: 2.5vw;
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    gap:25px;
-}
-
-
-
-
-
 
 
 
@@ -102,15 +86,82 @@ p {
     color: #92400e;
     }
 
+.form-header {
+    padding: 25px;
+}
 
+form {
+    padding-left: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap:25px;
+}
 
 input {
-    border: 2px solid #92400e;
+    border: 2px solid #3a1e0c;
     font-family: inherit;
     outline: none;
     padding: 0.25rem;
     border-radius: 0.5rem;
+    background-color: #fef9c3;
+    color: #bd4d0c;
+    font-weight: bold;
 }
+
+input:hover {
+    border-color: #804c2c;
+}
+
+input:focus {
+    border: 2.4px solid #bd4d0c;;
+}
+
+.content-one {
+    width: 500px;
+}
+
+
+.form-one , .form-two {
+    position: relative;
+}
+
+.form-two {
+    left:350px
+}
+
+.form-one input, .form-two input{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-one input + label, .form-two input + label {
+    position:absolute;
+    left: 0.7rem;
+    top: 0.5rem;
+    padding:0 0.3rem ;
+    color: #642704;
+    font-size: 0.75rem;
+    cursor: text;
+    background-color: #fef9c3;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+
+.form-one input:focus~ label,
+.form-one input:not(:placeholder-shown)+ .form-one input:not(:focus)~ label {
+    top: -0.35rem;
+    left: 1rem;
+    font-size: 0.65rem;
+    color: #bd4d0c;
+}
+
+
+
+
+
 
 
 button {
